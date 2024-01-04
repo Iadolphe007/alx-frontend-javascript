@@ -33,7 +33,6 @@ export default class HolbertonCourse {
   _validateString(value, attributeName) {
     if (typeof value !== 'string') {
       throw new TypeError(`${attributeName} must be a string.`);
-      return undefined;
     }
     return value;
   }
@@ -42,7 +41,6 @@ export default class HolbertonCourse {
   _validateNumber(value, attributeName) {
     if (typeof value !== 'number') {
       throw new TypeError(`${attributeName} must be a number.`);
-      // return undefined;
     }
     return value;
   }
@@ -51,7 +49,6 @@ export default class HolbertonCourse {
   _validateArrayOfStrings(value, attributeName) {
     if (!Array.isArray(value) || !value.every((item) => typeof item === 'string')) {
       throw new TypeError(`${attributeName} must be an array of strings.`);
-      // return undefined;
     }
     return value;
   }
