@@ -32,7 +32,7 @@ export default class HolbertonCourse {
   // eslint-disable-next-line class-methods-use-this
   _validateString(value, attributeName) {
     if (typeof value !== 'string') {
-      console.error(`${attributeName} must be a string.`);
+      throw new TypeError(`${attributeName} must be a string.`);
       return undefined;
     }
     return value;
@@ -41,8 +41,8 @@ export default class HolbertonCourse {
   // eslint-disable-next-line class-methods-use-this
   _validateNumber(value, attributeName) {
     if (typeof value !== 'number') {
-      console.error(`${attributeName} must be a number.`);
-      return undefined;
+      throw new TypeError(`${attributeName} must be a number.`);
+      // return undefined;
     }
     return value;
   }
@@ -50,8 +50,8 @@ export default class HolbertonCourse {
   // eslint-disable-next-line class-methods-use-this
   _validateArrayOfStrings(value, attributeName) {
     if (!Array.isArray(value) || !value.every((item) => typeof item === 'string')) {
-      console.error(`${attributeName} must be an array of strings.`);
-      return undefined;
+      throw new TypeError(`${attributeName} must be an array of strings.`);
+      // return undefined;
     }
     return value;
   }
