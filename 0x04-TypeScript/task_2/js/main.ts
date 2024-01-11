@@ -1,6 +1,6 @@
 interface DirectorInterface {
   workFromHome(): string;
-  gerCoffeeBreak(): string;
+  getCoffeeBreak(): string;
   workDirectorTasks(): string;
 }
 
@@ -14,7 +14,7 @@ class Director implements DirectorInterface {
   workFromHome(): string {
     return 'Working from home';
   }
-  goToWork(): string {
+  getCoffeeBreak(): string {
     return 'Getting a coffe break';
   }
   workDirectorTasks(): string {
@@ -34,7 +34,7 @@ class Teacher implements TeacherInterface {
   }
 }
 
-function ceateEmployee(salary: string | number): Director | Teacher {
+function createEmployee(salary: string | number): Director | Teacher {
   if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
   } else {
